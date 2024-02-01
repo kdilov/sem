@@ -1,6 +1,7 @@
 FROM openjdk:latest
-COPY ./target/classes/com /tmp/com
+COPY ./target/seMethods-1.0-SNAPSHOT-jar-with-dependencies.jar /tmp
 WORKDIR /tmp
+
 LABEL authors="konstantindilov"
 
-ENTRYPOINT ["java", "com.napier.sem.HelloWorld"]
+ENTRYPOINT ["java", "-jar", "seMethods-1.0-SNAPSHOT-jar-with-dependencies.jar"]
